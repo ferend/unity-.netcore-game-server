@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iPt4F7wSnrCFQY7s7vGDMkQ5eSL04RN2bUgDn5DpSikFcYssDSRU1IZVvgQDlxiZ3nmbsOZfJl5SOZ8qyCEPoQ==",
+  "dgSpecHash": "Eg/uTSfqvDrb4cNUvf8L/opKOTCmkf+b0ps0kp3+mvcAXUvCpN49xfLP5JxNms4F23fagzx2Hml8ARLf0KB0aQ==",
   "success": true,
   "projectFilePath": "/Users/ferhaterendalcik/Desktop/unity-.netcore-game-server/GameServer/GameSever/GameSever.csproj",
-  "expectedPackageFiles": [
-    "/Users/ferhaterendalcik/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "/Users/ferhaterendalcik/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
-    "/Users/ferhaterendalcik/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
-    "/Users/ferhaterendalcik/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
-    "/Users/ferhaterendalcik/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "/Users/ferhaterendalcik/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
