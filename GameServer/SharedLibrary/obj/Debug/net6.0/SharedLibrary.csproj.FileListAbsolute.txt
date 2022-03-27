@@ -1,0 +1,12 @@
+/Users/ferhaterendalcik/Desktop/unity-.net-game-server/GameServer/SharedLibrary/bin/Debug/net6.0/SharedLibrary.deps.json
+/Users/ferhaterendalcik/Desktop/unity-.net-game-server/GameServer/SharedLibrary/bin/Debug/net6.0/SharedLibrary.dll
+/Users/ferhaterendalcik/Desktop/unity-.net-game-server/GameServer/SharedLibrary/bin/Debug/net6.0/ref/SharedLibrary.dll
+/Users/ferhaterendalcik/Desktop/unity-.net-game-server/GameServer/SharedLibrary/bin/Debug/net6.0/SharedLibrary.pdb
+/Users/ferhaterendalcik/Desktop/unity-.net-game-server/GameServer/SharedLibrary/obj/Debug/net6.0/SharedLibrary.csproj.AssemblyReference.cache
+/Users/ferhaterendalcik/Desktop/unity-.net-game-server/GameServer/SharedLibrary/obj/Debug/net6.0/SharedLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ferhaterendalcik/Desktop/unity-.net-game-server/GameServer/SharedLibrary/obj/Debug/net6.0/SharedLibrary.AssemblyInfoInputs.cache
+/Users/ferhaterendalcik/Desktop/unity-.net-game-server/GameServer/SharedLibrary/obj/Debug/net6.0/SharedLibrary.AssemblyInfo.cs
+/Users/ferhaterendalcik/Desktop/unity-.net-game-server/GameServer/SharedLibrary/obj/Debug/net6.0/SharedLibrary.csproj.CoreCompileInputs.cache
+/Users/ferhaterendalcik/Desktop/unity-.net-game-server/GameServer/SharedLibrary/obj/Debug/net6.0/SharedLibrary.dll
+/Users/ferhaterendalcik/Desktop/unity-.net-game-server/GameServer/SharedLibrary/obj/Debug/net6.0/ref/SharedLibrary.dll
+/Users/ferhaterendalcik/Desktop/unity-.net-game-server/GameServer/SharedLibrary/obj/Debug/net6.0/SharedLibrary.pdb

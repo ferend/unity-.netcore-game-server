@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "KdzYIl5SHTyWzH5D7KZauEYdA9ruLpkzMkF4U9//KJg=",
+  "Source": "GameSever",
+  "BasePath": "_content/GameSever",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
