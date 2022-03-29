@@ -4,6 +4,10 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        
+        <PostBuildEvent Condition="$([MSBuild]::IsOSPlatform('OSX'))"></PostBuildEvent>
+        <PostBuildEvent></PostBuildEvent>
+    
     </PropertyGroup>
 
 </Project>

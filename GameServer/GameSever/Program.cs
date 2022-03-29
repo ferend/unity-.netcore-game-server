@@ -4,7 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson();
 
 //Scoped: every single time controller is accessed it is goin to craete
 builder.Services.AddScoped<IPlayerService,PlayerServices>();
