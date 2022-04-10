@@ -5,11 +5,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-// This will help us to return properties as pascal case.
-builder.Services.AddControllers().AddNewtonsoftJson(o =>
-{
-    o.SerializerSettings.ContractResolver = new DefaultContractResolver();
-});
+// This will help us to return properties as pascal case. Do not need after adding json formatting in unity.
+
+// builder.Services.AddControllers().AddNewtonsoftJson(o =>
+// {
+//     o.SerializerSettings.ContractResolver = new DefaultContractResolver();
+// });
 
 //Scoped: every single time controller is accessed it is going to create.
 builder.Services.AddScoped<IPlayerService,PlayerServices>();
