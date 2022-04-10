@@ -346,7 +346,7 @@
  <HintPath>/Users/ferhaterendalcik/Desktop/unity-.netcore-game-server/Game/Library/PackageCache/com.unity.collab-proxy@1.15.4/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>/Users/ferhaterendalcik/Desktop/unity-.netcore-game-server/Game/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <HintPath>/Users/ferhaterendalcik/Desktop/unity-.netcore-game-server/Game/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>/Users/ferhaterendalcik/Desktop/unity-.netcore-game-server/Game/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>

@@ -1,5 +1,6 @@
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -11,7 +12,7 @@ public static class HttpClient
                 getRequest.SendWebRequest();
                 while (!getRequest.isDone) await Task.Delay(10);
 
-                return JsonUtility.FromJson<T>(getRequest.downloadHandler.text);
+                return JsonConvert.DeserializeObject<T>(getRequest.downloadHandler.text);
         }
 
         public static async Task<T> Post<T>(string endpoint, object payload)
@@ -20,7 +21,7 @@ public static class HttpClient
                 postRequest.SendWebRequest();
                 
                 while (!postRequest.isDone) await Task.Delay(10);
-                return JsonUtility.FromJson<T>(postRequest.downloadHandler.text);
+                return JsonConvert.DeserializeObject<T>(postRequest.downloadHandler.text);
 
         }
         
@@ -37,10 +38,9 @@ public static class HttpClient
                 request.SetRequestHeader("Content-Type" , "application/json");
 
                 return request;
-        }
-
+        } 
         private static void AttachHeader(UnityWebRequest request, string key, string value)
-        {
+        { 
                 request.SetRequestHeader(key , value);
         }
 }

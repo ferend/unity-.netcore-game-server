@@ -334,7 +334,7 @@
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.25f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>/Users/ferhaterendalcik/Desktop/unity-.netcore-game-server/Game/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/AOT/Newtonsoft.Json.dll</HintPath>
+ <HintPath>/Users/ferhaterendalcik/Desktop/unity-.netcore-game-server/Game/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/AOT/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="SharedLibrary">
  <HintPath>/Users/ferhaterendalcik/Desktop/unity-.netcore-game-server/Game/Assets/DLLS/SharedLibrary.dll</HintPath>
