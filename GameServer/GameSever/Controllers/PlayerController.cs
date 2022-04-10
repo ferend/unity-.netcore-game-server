@@ -6,27 +6,23 @@ namespace GameSever.Controllers;
 
 [ApiController]
 [Route("[controller]")]
+
 public class PlayerController : ControllerBase
 {
-    private readonly PlayerServices _playerSerivces;
-    // this is a get request
-    //n query string
-    // [HttpGet]
-    // public Player Get([FromQuery] int id)
-    // {
-    //     var player = new Player() {Id = id};
-    //     return player;
-    // }
+    private readonly IPlayerService _playerSerivces;
 
-
-    public PlayerController(PlayerServices playerServices)
+    public PlayerController(IPlayerService playerService)
     {
-        _playerSerivces = playerServices;
+        _playerSerivces = playerService;
     }
     
+    // this is a get request
+    //n query string
+
     // get request via route
+    
     [HttpGet("{id}")]
-    public Player Get([FromQuery] int id)
+    public Player Get([FromRoute] int id)
     {
         var player = new Player() {Id = id};
         _playerSerivces.DoAdd();
@@ -40,3 +36,4 @@ public class PlayerController : ControllerBase
         return player;
     }
 }
+

@@ -4,8 +4,7 @@ namespace SharedLibrary;
 
 public class Player
 {
-    [JsonInclude] // 
-    public int Id { get; set; }
-    public int level { get; set; }
-    public float health { get; set; }
+    public int Id;
+    public int level;
+    public float health;
 }
