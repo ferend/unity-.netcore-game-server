@@ -1,11 +1,13 @@
+using GameSever;
 using GameSever.Services;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-// This will help us to return properties as pascal case. Do not need after adding json formatting in unity.
+builder.Services.AddDbContext<GameDbContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("Db")));
 
 // builder.Services.AddControllers().AddNewtonsoftJson(o =>
 // {
