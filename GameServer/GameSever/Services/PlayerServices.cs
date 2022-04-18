@@ -8,7 +8,7 @@ public class PlayerServices : IPlayerService
 {
     public void DoAdd()
     {
-        Console.WriteLine("Doadd initialized  ");
+        Console.WriteLine("Do add initialized  ");
     }
 }
 

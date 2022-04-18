@@ -1,7 +1,6 @@
 using GameSever;
 using GameSever.Services;
 using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 

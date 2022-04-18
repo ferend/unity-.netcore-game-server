@@ -22,7 +22,6 @@ public static class HttpClient
                 
                 while (!postRequest.isDone) await Task.Delay(10);
                 return JsonConvert.DeserializeObject<T>(postRequest.downloadHandler.text);
-
         }
         
         private static UnityWebRequest CreateRequest(string path, RequestType type = RequestType.GET, object data = null)
