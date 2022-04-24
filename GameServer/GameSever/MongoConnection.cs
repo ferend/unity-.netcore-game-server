@@ -5,7 +5,7 @@ public class MongoConnection
 {
     public static void Main()
     {
-        MongoClient dbClient = new MongoClient("mongodb://ferend:qDdYqMw10GLaimS@cluster0.84nnk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+        MongoClient dbClient = new MongoClient("");
 
         List<BsonDocument> dbList = dbClient.ListDatabases().ToList();
 
