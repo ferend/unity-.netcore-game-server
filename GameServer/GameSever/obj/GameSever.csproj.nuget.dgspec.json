@@ -58,6 +58,14 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.3, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.15.0, )"
+            },
+            "mongocsharpdriver": {
+              "target": "Package",
+              "version": "[2.15.0, )"
             }
           },
           "imports": [

@@ -17,6 +17,8 @@
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
       <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.3" />
+      <PackageReference Include="mongocsharpdriver" Version="2.15.0" />
+      <PackageReference Include="MongoDB.Driver" Version="2.15.0" />
     </ItemGroup>
 
 </Project>

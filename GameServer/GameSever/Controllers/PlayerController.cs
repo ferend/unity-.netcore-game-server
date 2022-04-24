@@ -35,5 +35,6 @@ public class PlayerController : ControllerBase
         Console.WriteLine("Player has been added to server.");
         return player;
     }
+    
 }
 
