@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameSever.Migrations
 {
     [DbContext(typeof(GameDbContext))]
-    [Migration("20220418210316_Initial")]
+    [Migration("20220612164232_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

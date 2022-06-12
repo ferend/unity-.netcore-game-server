@@ -10,10 +10,25 @@ namespace GameSever.Controllers;
 public class PlayerController : ControllerBase
 {
     private readonly IPlayerService _playerSerivces;
+    private readonly GameDbContext _context;
 
-    public PlayerController(IPlayerService playerService)
+    public PlayerController(IPlayerService playerService,  GameDbContext context)
     {
+        _context = context;
         _playerSerivces = playerService;
+
+        var user = new User()
+        {
+            Username = "testUser",
+            PasswordHash = "123456",
+            Salt = "notnull"
+
+        };
+
+        // Add new user to framework.
+        _context.Add(user);
+        _context.SaveChanges();
+
     }
     
     // this is a get request
