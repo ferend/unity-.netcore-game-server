@@ -1,8 +1,15 @@
 using GameSever;
+using GameSever.Models;
 using GameSever.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var settings = new Settings();
+
+// Bind our settings to server settings. That will do some magic in background to automatically go through our configuration and bind models.
+builder.Configuration.Bind("Settings " , settings);
+builder.Services.AddSingleton(settings);
 
 // Add services to the container.
 
@@ -22,6 +29,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
 }
+
 
 
 
