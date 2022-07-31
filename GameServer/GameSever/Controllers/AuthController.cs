@@ -7,8 +7,8 @@ namespace GameSever.Controllers;
 public class AuthController : ControllerBase
 {
     /// Both of these endpoints will be accessed from same route, it will just forward auth. BUT if you have two endpoints for post you need to declare route.
+    /// it will be logical to return something in endpoint requests.
     
-    /// it will be logical to retrun something in endpoint requests.
     [HttpPost(("register"))]
     public IActionResult Register()
     {
@@ -23,3 +23,4 @@ public class AuthController : ControllerBase
     }
     
 }
+

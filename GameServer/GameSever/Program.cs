@@ -2,6 +2,7 @@ using GameSever;
 using GameSever.Models;
 using GameSever.Services;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,10 +16,10 @@ builder.Services.AddSingleton(settings);
 
 builder.Services.AddDbContext<GameDbContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("Db")));
 
-// builder.Services.AddControllers().AddNewtonsoftJson(o =>
-// {
-//     o.SerializerSettings.ContractResolver = new DefaultContractResolver();
-// });
+builder.Services.AddControllers().AddNewtonsoftJson(o =>
+{
+    o.SerializerSettings.ContractResolver = new DefaultContractResolver();
+});
 
 //Scoped: every single time controller is accessed it is going to create.
 builder.Services.AddScoped<IPlayerService,PlayerServices>();
