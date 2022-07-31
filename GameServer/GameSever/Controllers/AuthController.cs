@@ -1,4 +1,7 @@
+using GameSever.Services;
 using Microsoft.AspNetCore.Mvc;
+using SharedLibrary.Requests;
+using SharedLibrary.Responses;
 
 namespace GameSever.Controllers;
 [ApiController]
@@ -8,18 +11,39 @@ public class AuthController : ControllerBase
 {
     /// Both of these endpoints will be accessed from same route, it will just forward auth. BUT if you have two endpoints for post you need to declare route.
     /// it will be logical to return something in endpoint requests.
+
+    private readonly IAuthenticationService _authenticationService;
     
-    [HttpPost(("register"))]
-    public IActionResult Register()
+    public AuthController(IAuthenticationService authenticationService)
     {
-        return Ok();
+        _authenticationService = authenticationService;
+    }
+
+    [HttpPost(("register"))]
+    public IActionResult Register(AuthenticationRequest request)
+    {
+        var (success,content) = _authenticationService.Register(request.Username, request.Password);
+        if (!success)
+        {
+            // returns username not available.
+            return BadRequest(content);
+        }
+        
+        // Forward to login screen after successfull register.
+        return Login(request);
     }
     
     [HttpPost(("login"))]
-    public IActionResult Login()
+    public IActionResult Login(AuthenticationRequest request)
     {
-        return Ok();
+        var (success,content) = _authenticationService.Login(request.Username, request.Password);
+        if (!success)
+        {
+            // returns username not available.
+            return BadRequest(content);
+        }
 
+        return Ok(new AuthenticationResponse() { Token = content});
     }
     
 }

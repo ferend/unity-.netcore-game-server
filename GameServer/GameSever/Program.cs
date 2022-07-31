@@ -23,6 +23,7 @@ builder.Services.AddControllers().AddNewtonsoftJson(o =>
 
 //Scoped: every single time controller is accessed it is going to create.
 builder.Services.AddScoped<IPlayerService,PlayerServices>();
+builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
 
 var app = builder.Build();
 
