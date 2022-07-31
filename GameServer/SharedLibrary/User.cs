@@ -7,5 +7,6 @@ public class User
     public string PasswordHash { get; set; }
     public string Salt { get; set; }
 
+    public List<Player> Players{ get; set; }
 
 }

@@ -1,9 +1,14 @@
 using GameSever.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SharedLibrary;
+using SharedLibrary.Requests;
 
 namespace GameSever.Controllers;
 
+
+[Authorize]
 [ApiController]
 [Route("[controller]")]
 
@@ -45,8 +50,18 @@ public class PlayerController : ControllerBase
     }
 
     [HttpPost]
-    public Player Post(Player player)
+    public Player Post(CreatePlayerRequest request)
     {
+        var userId = int.Parse( User.FindFirst("id").Value);
+        var user = _context.Users.Include(u => u.Players).First(u => u.Id == userId);
+        var player = new Player()
+        {
+            Name = request.Name,
+            User = user
+        };
+
+        _context.Add(player);
+        _context.SaveChanges();
         Console.WriteLine("Player has been added to server.");
         return player;
     }

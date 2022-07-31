@@ -60,6 +60,9 @@ public class AuthenticationService : IAuthenticationService
         {
             new Claim("id", user.Id.ToString())
         });
+        
+        
+        
         return subject;
     }
     

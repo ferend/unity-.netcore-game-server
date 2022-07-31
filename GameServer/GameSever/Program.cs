@@ -1,7 +1,11 @@
+using System.Text;
 using GameSever;
 using GameSever.Models;
 using GameSever.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,12 +22,24 @@ builder.Services.AddDbContext<GameDbContext>(o => o.UseSqlServer(builder.Configu
 
 builder.Services.AddControllers().AddNewtonsoftJson(o =>
 {
-    o.SerializerSettings.ContractResolver = new DefaultContractResolver();
+    o.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
 });
 
 //Scoped: every single time controller is accessed it is going to create.
 builder.Services.AddScoped<IPlayerService,PlayerServices>();
 builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+
+// Base issuing and validation.
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(settings.BearerKey)),
+        ValidateIssuerSigningKey = true,
+        ValidateAudience = false,
+        ValidateIssuer = false
+    };
+});
 
 var app = builder.Build();
 
@@ -38,6 +54,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseAuthentication();
 
 app.MapControllers();
 

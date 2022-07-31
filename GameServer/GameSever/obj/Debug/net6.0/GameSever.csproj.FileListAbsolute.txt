@@ -106,3 +106,4 @@
 /Users/ferhaterendalcik/Desktop/unity-.netcore-game-server/GameServer/GameSever/bin/Debug/net6.0/runtimes/osx/native/libmongocrypt.dylib
 /Users/ferhaterendalcik/Desktop/unity-.netcore-game-server/GameServer/GameSever/bin/Debug/net6.0/runtimes/win/native/mongocrypt.dll
 /Users/ferhaterendalcik/Desktop/unity-.netcore-game-server/GameServer/GameSever/bin/Debug/net6.0/MongoDB.Driver.Legacy.dll
+/Users/ferhaterendalcik/Desktop/unity-.netcore-game-server/GameServer/GameSever/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
